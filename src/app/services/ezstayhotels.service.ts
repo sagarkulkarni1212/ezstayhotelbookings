@@ -39,12 +39,12 @@ export class EzstayhotelsService {
     }
   ];
 
-  private _url = "https://jsonplaceholder.typicode.com/posts";
+  private _url = "http://52.187.25.91/api/hotel";
 
   constructor(private http: HttpClient) { }
 
   getHotelsByCity(hotelSearch: HotelSearch): any {//Observable<Hotel[]>
-    return this.hotels;//this.http.get<Hotel[]>(this._url);
+    return this.http.get<Hotel[]>(this._url);//this.hotels;
   }
 
 }

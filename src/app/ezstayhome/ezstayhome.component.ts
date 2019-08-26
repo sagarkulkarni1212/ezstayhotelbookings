@@ -19,10 +19,10 @@ export class EzstayhomeComponent implements OnInit {
     document.getElementById("ezStayGuests")["defaultValue"] = "0";
     document.getElementById("ezStayRooms")["defaultValue"] = "0";
 
-    //const hotelsObservable = this.ezstayhotelsService.getHotelsByCity(this.hotelSearchParam);
-    // hotelsObservable.subscribe((hotelsData: Hotel[]) => {
-    //   this.hotels = hotelsData;
-    // });
-    this.hotels =this.ezstayhotelsService.getHotelsByCity(this.hotelSearchParam);
+    const hotelsObservable = this.ezstayhotelsService.getHotelsByCity(this.hotelSearchParam);
+    hotelsObservable.subscribe((hotelsData: Hotel[]) => {
+      this.hotels = hotelsData;
+    });
+    //this.hotels =this.ezstayhotelsService.getHotelsByCity(this.hotelSearchParam);
   }
 }
