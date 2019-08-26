@@ -1,0 +1,80 @@
+<div class="jumbotron jumbotron-fluid" style="
+min-height: -webkit-fill-available;
+">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-2" style="background-color:#aeafb1;">
+                <div class="form-group">
+                    <label for="email">CITY</label>
+                    <select class="form-control" id="sel1">
+                        <option>PUNE</option>
+                        <option>MUMBAI</option>
+                        <option>HYDERABAD</option>
+                        <option>DELHI</option>
+                        <option>KOLKATA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3" style="background-color:#aeafb1;">
+                <div class="form-group">
+                    <label for="email">CHECK-IN</label>
+                    <input class="form-control" type="date" name="bday">
+                </div>
+            </div>
+            <div class="col-sm-3" style="background-color:#aeafb1;">
+                <div class="form-group">
+                    <label for="email">CHECK-OUT</label>
+                    <input class="form-control" type="date" name="bday">
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:#aeafb1;">
+                <div class="form-group">
+                    <label for="email">ROOMS</label>
+                    <input class="form-control" id="ezStayGuests" type="number" name="bday">
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:#aeafb1;">
+                <div class="form-group">
+                    <label for="email">GUESTS</label>
+                    <input class="form-control" id="ezStayRooms" type="number" name="bday">
+                </div>
+            </div>
+            <div class="col-sm-2" style="background-color:#aeafb1;">
+                <button type="button" style="margin-top: 29px;" class="btn btn-warning">SEARCH</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="container">
+                <!-- <p>{{hotels | json}}</p> -->
+                <div class="card">
+                    <article>
+                        <div class="row" *ngFor="let hotel of hotels">
+                            <div class="col-sm-4">
+                                <img src="../../assets/ezstayemptylogo.png" alt="No image found" style="
+                                height: 50;
+                                height: 170px;
+                                padding: 20px;
+                                width: 170px;
+                            ">
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>{{hotel.name}}</h4>
+                                <h6>Ratings : {{hotel.rating}}</h6>
+                                <h6>City : {{hotel.city}}</h6>
+                                <h6>Address : {{hotel.address}}</h6>
+                                <h6>Contact : {{hotel.phone}}</h6>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-danger" style="margin-top: 29px;" type="button">BOOK</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
