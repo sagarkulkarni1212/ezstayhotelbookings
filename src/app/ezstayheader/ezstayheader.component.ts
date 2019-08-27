@@ -11,5 +11,7 @@ export class EzstayheaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  logOut() {
+    localStorage.removeItem("auth-token");
+  }
 }
